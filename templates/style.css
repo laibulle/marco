@@ -1,0 +1,377 @@
+/* Recipe PDF Styling */
+
+@page {
+    size: A4;
+    margin: 1.5cm;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background: white;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Header */
+.recipe-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 3px solid #e8505b;
+}
+
+.recipe-title {
+    font-size: 2.5rem;
+    color: #e8505b;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.recipe-description {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.recipe-meta {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.meta-icon {
+    font-size: 1.5rem;
+}
+
+.meta-item strong {
+    display: block;
+    font-size: 0.9rem;
+    color: #34495e;
+}
+
+.meta-item p {
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+
+/* Psychonutrition Section */
+.psychonutrition {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.psychonutrition h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.anxiety-score {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.score-circle {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.score-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.score-max {
+    font-size: 1.2rem;
+    margin-left: 0.2rem;
+}
+
+.score-label {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.nutrients-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.nutrient-box {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.nutrient-box h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.nutrient-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.nutrient-box li {
+    padding: 0.3rem 0;
+    font-size: 0.95rem;
+}
+
+.nutrient-box li:before {
+    content: "✓ ";
+    margin-right: 0.5rem;
+}
+
+/* Sections */
+section {
+    margin-bottom: 2rem;
+    page-break-inside: avoid;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #e8505b;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #f8f9fa;
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: #34495e;
+    margin-bottom: 0.75rem;
+}
+
+/* Ingredients */
+.ingredients-list {
+    list-style: none;
+    padding: 0;
+}
+
+.ingredients-list li {
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    background: #f8f9fa;
+    border-left: 4px solid #e8505b;
+    display: flex;
+    gap: 1rem;
+}
+
+.ingredient-amount {
+    font-weight: bold;
+    color: #e8505b;
+    min-width: 80px;
+}
+
+.ingredient-name {
+    flex: 1;
+    color: #2c3e50;
+}
+
+.ingredient-notes {
+    color: #7f8c8d;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* Instructions */
+.instructions-list {
+    counter-reset: step-counter;
+    list-style: none;
+    padding: 0;
+}
+
+.instructions-list li {
+    counter-increment: step-counter;
+    position: relative;
+    padding-left: 3rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.instructions-list li:before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #e8505b;
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Chef Tips */
+.chef-tips {
+    background: #fff9e6;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 5px solid #f39c12;
+}
+
+.tips-list {
+    list-style: none;
+    padding: 0;
+}
+
+.tips-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.tips-list li:before {
+    content: "💡";
+    position: absolute;
+    left: 0;
+}
+
+/* Nutrition */
+.nutrition {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.nutrition-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.nutrition-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+    border: 2px solid #e9ecef;
+}
+
+.nutrition-item.highlight {
+    border-color: #667eea;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+}
+
+.nutrition-item strong {
+    display: block;
+    color: #34495e;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.nutrition-item span {
+    display: block;
+    font-size: 1.3rem;
+    color: #e8505b;
+    font-weight: bold;
+}
+
+/* Extra Info */
+.extra-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.storage, .variations {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.variations ul {
+    list-style: none;
+    padding: 0;
+}
+
+.variations li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.variations li:before {
+    content: "🔄";
+    position: absolute;
+    left: 0;
+}
+
+/* Footer */
+footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid #e9ecef;
+    text-align: center;
+}
+
+.generated-by {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    background: #e8505b;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+/* Print Optimization */
+@media print {
+    body {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+    
+    .container {
+        width: 100%;
+    }
+    
+    section {
+        page-break-inside: avoid;
+    }
+}

@@ -1,0 +1,395 @@
+{
+    "regions": {
+        "europe": {
+            "northern": [
+                "uk",
+                "ireland",
+                "scandinavia",
+                "germany",
+                "poland"
+            ],
+            "southern": [
+                "spain",
+                "italy",
+                "greece",
+                "portugal"
+            ],
+            "western": [
+                "france",
+                "belgium",
+                "netherlands"
+            ],
+            "eastern": [
+                "russia",
+                "ukraine",
+                "romania"
+            ]
+        },
+        "north_america": {
+            "usa_north": [
+                "northeast",
+                "midwest",
+                "pacific_northwest"
+            ],
+            "usa_south": [
+                "southeast",
+                "southwest",
+                "california"
+            ],
+            "canada": [
+                "eastern",
+                "western",
+                "prairies"
+            ]
+        },
+        "asia": {
+            "east": [
+                "japan",
+                "korea",
+                "china"
+            ],
+            "southeast": [
+                "thailand",
+                "vietnam",
+                "malaysia",
+                "indonesia"
+            ],
+            "south": [
+                "india",
+                "pakistan"
+            ]
+        }
+    },
+    "seasonal_ingredients": {
+        "vegetables": {
+            "tomatoes": {
+                "peak_season": [
+                    "summer"
+                ],
+                "regions": [
+                    "all"
+                ],
+                "substitutes": {
+                    "winter": {
+                        "ingredient": "canned tomatoes",
+                        "reason": "Better quality than winter fresh tomatoes"
+                    },
+                    "spring": {
+                        "ingredient": "cherry tomatoes",
+                        "reason": "First tomatoes of the season"
+                    }
+                }
+            },
+            "zucchini": {
+                "peak_season": [
+                    "summer"
+                ],
+                "regions": [
+                    "all"
+                ],
+                "substitutes": {
+                    "winter": {
+                        "ingredient": "butternut squash",
+                        "reason": "Similar texture when cooked"
+                    },
+                    "fall": {
+                        "ingredient": "pumpkin",
+                        "reason": "Seasonal and similar sweetness"
+                    }
+                }
+            },
+            "asparagus": {
+                "peak_season": [
+                    "spring"
+                ],
+                "regions": [
+                    "europe",
+                    "north_america"
+                ],
+                "substitutes": {
+                    "summer": {
+                        "ingredient": "green beans",
+                        "reason": "Similar texture and color"
+                    },
+                    "winter": {
+                        "ingredient": "broccoli",
+                        "reason": "Similar nutritional profile"
+                    }
+                }
+            },
+            "brussels_sprouts": {
+                "peak_season": [
+                    "fall",
+                    "winter"
+                ],
+                "regions": [
+                    "europe",
+                    "north_america"
+                ],
+                "substitutes": {
+                    "summer": {
+                        "ingredient": "cabbage",
+                        "reason": "Same family, lighter preparation"
+                    },
+                    "spring": {
+                        "ingredient": "broccoli",
+                        "reason": "Similar texture"
+                    }
+                }
+            },
+            "pumpkin": {
+                "peak_season": [
+                    "fall"
+                ],
+                "regions": [
+                    "all"
+                ],
+                "substitutes": {
+                    "spring": {
+                        "ingredient": "carrots",
+                        "reason": "Similar sweetness"
+                    },
+                    "summer": {
+                        "ingredient": "summer squash",
+                        "reason": "Seasonal squash variety"
+                    }
+                }
+            },
+            "spinach": {
+                "peak_season": [
+                    "spring",
+                    "fall"
+                ],
+                "regions": [
+                    "all"
+                ],
+                "substitutes": {
+                    "summer": {
+                        "ingredient": "swiss chard",
+                        "reason": "Heat-tolerant leafy green"
+                    },
+                    "winter": {
+                        "ingredient": "kale",
+                        "reason": "Frost-hardy green"
+                    }
+                }
+            },
+            "bell_peppers": {
+                "peak_season": [
+                    "summer",
+                    "fall"
+                ],
+                "regions": [
+                    "all"
+                ],
+                "substitutes": {
+                    "winter": {
+                        "ingredient": "roasted red peppers (jarred)",
+                        "reason": "Better than winter fresh"
+                    },
+                    "spring": {
+                        "ingredient": "spring onions",
+                        "reason": "Fresh seasonal flavor"
+                    }
+                }
+            },
+            "cauliflower": {
+                "peak_season": [
+                    "fall",
+                    "winter"
+                ],
+                "regions": [
+                    "all"
+                ],
+                "substitutes": {
+                    "summer": {
+                        "ingredient": "broccoli",
+                        "reason": "Similar texture, summer harvest"
+                    }
+                }
+            }
+        },
+        "fruits": {
+            "strawberries": {
+                "peak_season": [
+                    "spring",
+                    "summer"
+                ],
+                "regions": [
+                    "all"
+                ],
+                "substitutes": {
+                    "winter": {
+                        "ingredient": "frozen strawberries",
+                        "reason": "Better than winter fresh"
+                    },
+                    "fall": {
+                        "ingredient": "apples",
+                        "reason": "Seasonal sweet fruit"
+                    }
+                }
+            },
+            "blueberries": {
+                "peak_season": [
+                    "summer"
+                ],
+                "regions": [
+                    "north_america",
+                    "europe"
+                ],
+                "substitutes": {
+                    "winter": {
+                        "ingredient": "frozen blueberries",
+                        "reason": "Excellent frozen quality"
+                    },
+                    "fall": {
+                        "ingredient": "cranberries",
+                        "reason": "Seasonal berry"
+                    }
+                }
+            },
+            "peaches": {
+                "peak_season": [
+                    "summer"
+                ],
+                "regions": [
+                    "all"
+                ],
+                "substitutes": {
+                    "winter": {
+                        "ingredient": "canned peaches",
+                        "reason": "Better than winter fresh"
+                    },
+                    "fall": {
+                        "ingredient": "apples",
+                        "reason": "Seasonal tree fruit"
+                    }
+                }
+            },
+            "apples": {
+                "peak_season": [
+                    "fall"
+                ],
+                "regions": [
+                    "all"
+                ],
+                "substitutes": {
+                    "summer": {
+                        "ingredient": "stone fruits",
+                        "reason": "Summer tree fruits"
+                    }
+                }
+            },
+            "citrus": {
+                "peak_season": [
+                    "winter"
+                ],
+                "regions": [
+                    "all"
+                ],
+                "substitutes": {
+                    "summer": {
+                        "ingredient": "lemon",
+                        "reason": "Available year-round"
+                    }
+                }
+            }
+        },
+        "herbs": {
+            "basil": {
+                "peak_season": [
+                    "summer"
+                ],
+                "regions": [
+                    "all"
+                ],
+                "substitutes": {
+                    "winter": {
+                        "ingredient": "dried basil or parsley",
+                        "reason": "Fresh basil expensive and low quality in winter"
+                    }
+                }
+            },
+            "cilantro": {
+                "peak_season": [
+                    "spring",
+                    "fall"
+                ],
+                "regions": [
+                    "all"
+                ],
+                "substitutes": {
+                    "summer": {
+                        "ingredient": "parsley",
+                        "reason": "Cilantro bolts in heat"
+                    }
+                }
+            },
+            "mint": {
+                "peak_season": [
+                    "spring",
+                    "summer"
+                ],
+                "regions": [
+                    "all"
+                ],
+                "substitutes": {
+                    "winter": {
+                        "ingredient": "dried mint",
+                        "reason": "Fresh mint scarce in winter"
+                    }
+                }
+            }
+        },
+        "fish": {
+            "salmon": {
+                "peak_season": [
+                    "summer",
+                    "fall"
+                ],
+                "regions": [
+                    "north_america",
+                    "europe"
+                ],
+                "note": "Wild salmon peaks in summer, farmed available year-round"
+            },
+            "cod": {
+                "peak_season": [
+                    "winter"
+                ],
+                "regions": [
+                    "europe",
+                    "north_america"
+                ],
+                "substitutes": {
+                    "summer": {
+                        "ingredient": "halibut",
+                        "reason": "Similar white fish, summer catch"
+                    }
+                }
+            }
+        },
+        "general_guidelines": [
+            {
+                "season": "spring",
+                "focus": "Tender greens, asparagus, peas, radishes, new potatoes, herbs",
+                "cooking_style": "Light preparations, quick cooking, fresh flavors"
+            },
+            {
+                "season": "summer",
+                "focus": "Tomatoes, zucchini, eggplant, peppers, berries, stone fruits",
+                "cooking_style": "Grilling, raw preparations, salads, minimal cooking"
+            },
+            {
+                "season": "fall",
+                "focus": "Squash, root vegetables, apples, pears, hearty greens",
+                "cooking_style": "Roasting, braising, warming spices"
+            },
+            {
+                "season": "winter",
+                "focus": "Root vegetables, citrus, hardy greens, stored squash",
+                "cooking_style": "Slow cooking, stews, roasting, preserved ingredients"
+            }
+        ]
+    }
+}

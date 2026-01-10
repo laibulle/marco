@@ -1,0 +1,246 @@
+{
+    "nutrients": {
+        "omega3": {
+            "name": "Omega-3 Fatty Acids",
+            "anxiety_benefit": "Reduces inflammation in the brain, supports neurotransmitter function, decreases cortisol levels",
+            "daily_target_mg": 1000,
+            "sources": [
+                "salmon",
+                "mackerel",
+                "sardines",
+                "anchovies",
+                "herring",
+                "walnuts",
+                "chia seeds",
+                "flaxseeds",
+                "hemp seeds",
+                "edamame",
+                "seaweed",
+                "algae oil"
+            ]
+        },
+        "magnesium": {
+            "name": "Magnesium",
+            "anxiety_benefit": "Regulates stress response, supports GABA production, calms nervous system",
+            "daily_target_mg": 400,
+            "sources": [
+                "spinach",
+                "swiss chard",
+                "pumpkin seeds",
+                "almonds",
+                "black beans",
+                "edamame",
+                "dark chocolate",
+                "avocado",
+                "quinoa",
+                "cashews",
+                "brazil nuts"
+            ]
+        },
+        "vitamin_b6": {
+            "name": "Vitamin B6",
+            "anxiety_benefit": "Essential for serotonin and GABA production, regulates mood",
+            "daily_target_mg": 1.7,
+            "sources": [
+                "chicken",
+                "turkey",
+                "salmon",
+                "tuna",
+                "chickpeas",
+                "bananas",
+                "potatoes",
+                "fortified cereals",
+                "beef liver",
+                "spinach",
+                "bell peppers"
+            ]
+        },
+        "vitamin_b12": {
+            "name": "Vitamin B12",
+            "anxiety_benefit": "Supports nervous system health, aids in mood regulation",
+            "daily_target_mcg": 2.4,
+            "sources": [
+                "salmon",
+                "tuna",
+                "beef",
+                "chicken",
+                "eggs",
+                "milk",
+                "cheese",
+                "yogurt",
+                "fortified plant milk",
+                "nutritional yeast",
+                "fortified cereals"
+            ]
+        },
+        "tryptophan": {
+            "name": "Tryptophan",
+            "anxiety_benefit": "Precursor to serotonin, promotes relaxation and mood stability",
+            "daily_target_mg": 1000,
+            "sources": [
+                "turkey",
+                "chicken",
+                "eggs",
+                "salmon",
+                "tuna",
+                "tofu",
+                "pumpkin seeds",
+                "cheese",
+                "nuts",
+                "oats",
+                "beans",
+                "lentils"
+            ]
+        },
+        "zinc": {
+            "name": "Zinc",
+            "anxiety_benefit": "Modulates brain and nervous system response to stress",
+            "daily_target_mg": 11,
+            "sources": [
+                "oysters",
+                "beef",
+                "pork",
+                "chicken",
+                "pumpkin seeds",
+                "cashews",
+                "chickpeas",
+                "lentils",
+                "hemp seeds",
+                "yogurt",
+                "cheese",
+                "oatmeal"
+            ]
+        },
+        "vitamin_d": {
+            "name": "Vitamin D",
+            "anxiety_benefit": "Regulates mood, supports serotonin synthesis",
+            "daily_target_iu": 600,
+            "sources": [
+                "salmon",
+                "mackerel",
+                "sardines",
+                "tuna",
+                "egg yolks",
+                "fortified milk",
+                "fortified orange juice",
+                "mushrooms",
+                "cod liver oil"
+            ]
+        },
+        "probiotics": {
+            "name": "Probiotics",
+            "anxiety_benefit": "Supports gut-brain axis, reduces inflammation, may decrease anxiety via vagus nerve",
+            "sources": [
+                "yogurt",
+                "kefir",
+                "sauerkraut",
+                "kimchi",
+                "miso",
+                "tempeh",
+                "kombucha",
+                "pickles",
+                "natto"
+            ]
+        }
+    },
+    "food_combinations": [
+        {
+            "combination": "salmon + quinoa + spinach",
+            "score": 9.5,
+            "benefits": "Complete amino acid profile, omega-3, magnesium, B vitamins"
+        },
+        {
+            "combination": "chicken + sweet potato + broccoli",
+            "score": 8.5,
+            "benefits": "Tryptophan, complex carbs for serotonin, B6, fiber"
+        },
+        {
+            "combination": "turkey + brown rice + leafy greens",
+            "score": 9.0,
+            "benefits": "High tryptophan, complex carbs, magnesium, B vitamins"
+        },
+        {
+            "combination": "yogurt + berries + walnuts",
+            "score": 8.0,
+            "benefits": "Probiotics, antioxidants, omega-3"
+        },
+        {
+            "combination": "eggs + avocado + whole grain toast",
+            "score": 8.5,
+            "benefits": "B12, healthy fats, tryptophan, complex carbs"
+        }
+    ],
+    "anxiety_types": {
+        "general_anxiety": {
+            "priority_nutrients": [
+                "omega3",
+                "magnesium",
+                "vitamin_b6"
+            ],
+            "recommended_foods": [
+                "salmon",
+                "spinach",
+                "chicken",
+                "walnuts",
+                "dark chocolate"
+            ]
+        },
+        "social_anxiety": {
+            "priority_nutrients": [
+                "tryptophan",
+                "vitamin_b6",
+                "magnesium"
+            ],
+            "recommended_foods": [
+                "turkey",
+                "chickpeas",
+                "bananas",
+                "pumpkin seeds"
+            ]
+        },
+        "panic_disorder": {
+            "priority_nutrients": [
+                "magnesium",
+                "omega3",
+                "vitamin_d"
+            ],
+            "recommended_foods": [
+                "leafy greens",
+                "fatty fish",
+                "almonds",
+                "fortified foods"
+            ]
+        },
+        "stress_related": {
+            "priority_nutrients": [
+                "magnesium",
+                "vitamin_b6",
+                "zinc"
+            ],
+            "recommended_foods": [
+                "dark chocolate",
+                "cashews",
+                "oysters",
+                "quinoa"
+            ]
+        }
+    },
+    "foods_to_limit": [
+        {
+            "food": "caffeine",
+            "reason": "Can increase anxiety, disrupts sleep, raises cortisol"
+        },
+        {
+            "food": "alcohol",
+            "reason": "Disrupts neurotransmitters, affects sleep quality"
+        },
+        {
+            "food": "refined_sugar",
+            "reason": "Blood sugar spikes and crashes can worsen anxiety"
+        },
+        {
+            "food": "processed_foods",
+            "reason": "Often lack nutrients, may contain additives that affect mood"
+        }
+    ]
+}

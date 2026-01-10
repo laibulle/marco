@@ -1,0 +1,9 @@
+{
+    "dependencies": [
+        "."
+    ],
+    "graphs": {
+        "recipe_generator": "./src/marco/graph.py:create_recipe_graph"
+    },
+    "env": ".env"
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ recipe.name }}</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="recipe-header">
+            <h1 class="recipe-title">{{ recipe.name }}</h1>
+            <p class="recipe-description">{{ recipe.description }}</p>
+
+            <div class="recipe-meta">
+                <div class="meta-item">
+                    <span class="meta-icon">⏱️</span>
+                    <div>
+                        <strong>Prep Time</strong>
+                        <p>{{ recipe.prep_time }} min</p>
+                    </div>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-icon">🍳</span>
+                    <div>
+                        <strong>Cook Time</strong>
+                        <p>{{ recipe.cook_time }} min</p>
+                    </div>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-icon">🍽️</span>
+                    <div>
+                        <strong>Servings</strong>
+                        <p>{{ recipe.servings }}</p>
+                    </div>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-icon">👨‍🍳</span>
+                    <div>
+                        <strong>Difficulty</strong>
+                        <p>{{ recipe.difficulty|capitalize }}</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Psychonutrition Analysis -->
+        {% if recipe.psychonutrition_analysis %}
+        <section class="psychonutrition">
+            <h2>🧠 Anxiety Management Benefits</h2>
+            <div class="anxiety-score">
+                <div class="score-circle">
+                    <span class="score-value">{{ recipe.psychonutrition_analysis.anxiety_score }}</span>
+                    <span class="score-max">/10</span>
+                </div>
+                <p class="score-label">Anxiety Reduction Score</p>
+            </div>
+
+            <div class="nutrients-grid">
+                <div class="nutrient-box">
+                    <h3>Key Nutrients</h3>
+                    <ul>
+                        {% for nutrient in recipe.psychonutrition_analysis.key_nutrients %}
+                        <li>{{ nutrient }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="nutrient-box">
+                    <h3>How It Helps</h3>
+                    <ul>
+                        {% for mechanism in recipe.psychonutrition_analysis.mechanisms[:3] %}
+                        <li>{{ mechanism }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </section>
+        {% endif %}
+
+        <!-- Ingredients -->
+        <section class="ingredients">
+            <h2>📋 Ingredients</h2>
+            <ul class="ingredients-list">
+                {% for ingredient in recipe.ingredients %}
+                <li>
+                    <span class="ingredient-amount">{{ ingredient.quantity }} {{ ingredient.unit }}</span>
+                    <span class="ingredient-name">{{ ingredient.name }}</span>
+                    {% if ingredient.notes %}
+                    <span class="ingredient-notes">({{ ingredient.notes }})</span>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <!-- Instructions -->
+        <section class="instructions">
+            <h2>👨‍🍳 Instructions</h2>
+            <ol class="instructions-list">
+                {% for instruction in recipe.instructions %}
+                <li>{{ instruction }}</li>
+                {% endfor %}
+            </ol>
+        </section>
+
+        <!-- Chef Tips -->
+        {% if recipe.chef_tips %}
+        <section class="chef-tips">
+            <h2>💡 Chef Tips</h2>
+            <ul class="tips-list">
+                {% for tip in recipe.chef_tips %}
+                <li>{{ tip }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+        {% endif %}
+
+        <!-- Nutrition Facts -->
+        <section class="nutrition">
+            <h2>📊 Nutrition Facts (per serving)</h2>
+            <div class="nutrition-grid">
+                <div class="nutrition-item">
+                    <strong>Calories</strong>
+                    <span>{{ recipe.nutrition.calories }}</span>
+                </div>
+                <div class="nutrition-item">
+                    <strong>Protein</strong>
+                    <span>{{ recipe.nutrition.protein_g }}g</span>
+                </div>
+                <div class="nutrition-item">
+                    <strong>Carbs</strong>
+                    <span>{{ recipe.nutrition.carbs_g }}g</span>
+                </div>
+                <div class="nutrition-item">
+                    <strong>Fat</strong>
+                    <span>{{ recipe.nutrition.fat_g }}g</span>
+                </div>
+                <div class="nutrition-item">
+                    <strong>Fiber</strong>
+                    <span>{{ recipe.nutrition.fiber_g }}g</span>
+                </div>
+
+                {% if recipe.nutrition.omega3_mg %}
+                <div class="nutrition-item highlight">
+                    <strong>Omega-3</strong>
+                    <span>{{ recipe.nutrition.omega3_mg }}mg</span>
+                </div>
+                {% endif %}
+
+                {% if recipe.nutrition.magnesium_mg %}
+                <div class="nutrition-item highlight">
+                    <strong>Magnesium</strong>
+                    <span>{{ recipe.nutrition.magnesium_mg }}mg</span>
+                </div>
+                {% endif %}
+
+                {% if recipe.nutrition.vitamin_b6_mg %}
+                <div class="nutrition-item highlight">
+                    <strong>Vitamin B6</strong>
+                    <span>{{ recipe.nutrition.vitamin_b6_mg }}mg</span>
+                </div>
+                {% endif %}
+            </div>
+        </section>
+
+        <!-- Storage & Variations -->
+        <div class="extra-info">
+            {% if recipe.storage_instructions %}
+            <section class="storage">
+                <h3>🥡 Storage</h3>
+                <p>{{ recipe.storage_instructions }}</p>
+            </section>
+            {% endif %}
+
+            {% if recipe.variations %}
+            <section class="variations">
+                <h3>🔄 Variations</h3>
+                <ul>
+                    {% for variation in recipe.variations %}
+                    <li>{{ variation }}</li>
+                    {% endfor %}
+                </ul>
+            </section>
+            {% endif %}
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p class="generated-by">Generated by Marco 🍽️ - Your AI Chef for Anxiety Management</p>
+            {% if recipe.tags %}
+            <div class="tags">
+                {% for tag in recipe.tags %}
+                <span class="tag">{{ tag }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </footer>
+    </div>
+</body>
+
+</html>
